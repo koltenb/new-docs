@@ -1,0 +1,35 @@
+---
+title: Claim Claimable Balance Object
+order: 150
+---
+
+import { ExampleResponse } from "components/ExampleResponse";
+import { AttributeTable } from "components/AttributeTable";
+
+Creates a ClaimableBalanceEntry.
+
+See the [`Claim Claimable Balance` errors](../../../errors/result-codes/operation-specific/claim-claimable-balance.mdx).
+
+<AttributeTable>
+
+- ATTRIBUTE
+  - DATA TYPE
+  - DESCRIPTION
+- balance_id
+  - number
+  - The unique ID of balance to be claimed.
+- claimant
+  - ?
+  - The account ID of a claimant. 
+
+</AttributeTable>
+
+<ExampleResponse>
+
+```json
+{
+  "fill" 
+}
+```
+
+</ExampleResponse>
