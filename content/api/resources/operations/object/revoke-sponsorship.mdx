@@ -1,0 +1,58 @@
+---
+title: Revoke Sponsorship Object
+order: 180
+---
+
+import { ExampleResponse } from "components/ExampleResponse";
+import { AttributeTable } from "components/AttributeTable";
+
+The logic of this operation depends on the state of the source account.
+
+If the source account is not sponsored or is sponsored by the owner of the specified entry or sub-entry, then attempt to revoke the sponsorship. If the source account is sponsored, the next step depends on whether the entry is sponsored or not. If it is sponsored, attempt to transfer the sponsorship to the sponsor of the source account. If the entry is not sponsored, then establish the sponsorship.
+
+See the [`Revoke Sponsorship` errors](../../../errors/result-codes/operation-specific/revoke-sponsorship.mdx).
+
+<AttributeTable>
+
+- ATTRIBUTE
+  - DATA TYPE
+  - DESCRIPTION
+- account_id
+  - ? 
+  - If account sponsorship was revoked.
+- claimable_balance_id
+  - ? 
+  - If account data sponsorship was revoked.  
+- data_account_id 
+  - ? 
+  - If account data sponsorship was revoked. 
+- data_name 
+  - ? 
+  - If account data sponsorship was revoked. 
+- offer_id 
+  - ? 
+  - If offer sponsorship was revoked. 
+- trustline_account_id 
+  - ? 
+  - If trustline sponsorship was revoked. 
+- trustline_asset 
+  - ? 
+  - If trustline sponsorship was revoked. 
+- signer_account_id 
+  - ? 
+  - If signer sponsorship was revoked.
+- signer_key 
+  - ? 
+  - If signer sponsorship was revoked.
+
+</AttributeTable>
+
+<ExampleResponse>
+
+```json
+{
+  "fill" 
+}
+```
+
+</ExampleResponse>
